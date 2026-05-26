@@ -1,0 +1,44 @@
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --button: #dddddd;
+  --highlight: #88ccff;
+}
+body.dark {
+  --bg: #000000;
+  --text: #f0f0f0;
+  --button: #333333;
+  --highlight: #5599ff;
+}
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: sans-serif;
+  max-width: 512px;
+  margin: auto;
+  padding: 1em;
+}
+button, select, textarea {
+  background-color: var(--button);
+  color: var(--text);
+  border: none;
+  margin: 2px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+.selected {
+  background-color: var(--highlight);
+}
+.tags-section { display: none; }
+.tags-section.open { display: block; }
+.wrap { white-space: pre-wrap; width: 100%; height: 6em; }
+.emoji {
+  font-size: 1.5em;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px;
+  touch-action: manipulation;
+}
+.emoji.selected { outline: 2px solid var(--highlight); }
+.fold-toggle { cursor: pointer; text-decoration: underline; }
+textarea { width: 100%; box-sizing: border-box; }
